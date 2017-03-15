@@ -1,8 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<fragment
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:name="com.google.android.gms.maps.MapFragment">
+    tools:context="com.palarran.mapone.MainActivity">
 
-</fragment>
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="com.google.android.gms.maps.MapFragment"
+        map:cameraTargetLat="47.6062"
+        map:cameraTargetLng="-122.3321"
+        map:cameraBearing="10"
+        map:cameraTilt="65"
+        map:cameraZoom="120"/>
+
+</RelativeLayout>
