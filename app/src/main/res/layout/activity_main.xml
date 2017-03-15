@@ -27,21 +27,24 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Map"/>
+                android:text="@string/map"
+                android:onClick="mapRegular"/>
 
             <Button
-                android:id="@+id/banSatellite"
+                android:id="@+id/btnSatellite"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Satellite"/>
+                android:text="@string/satellite"
+                android:onClick="mapSatellite"/>
 
             <Button
                 android:id="@+id/btnHybrid"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Hybrid"/>
+                android:text="@string/hybrid"
+                android:onClick="mapHybrid"/>
         </LinearLayout>
 
         <fragment
