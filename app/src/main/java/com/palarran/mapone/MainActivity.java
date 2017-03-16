@@ -89,11 +89,12 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
         //Placing map markers (Shilshole, La Playita, & Musket Cove) on map
         mMap.addMarker(shilshole);
-        mMap.addCircle(new CircleOptions()
-                .center(shilshole)
-                .radius(500)
-                .strokeColor(Color.GREEN)
-                .fillColor(Color.YELLOW));
+        //Not used or correct but leaving here for future notes
+//        mMap.addCircle(new CircleOptions()
+//                .center(shilshole)
+//                .radius(500)
+//                .strokeColor(Color.GREEN)
+//                .fillColor(Color.YELLOW));
         mMap.addMarker(laPlayita);
         mMap.addMarker(musketCove);
         //Set camera at starting point, high over the middle of the U.S of A.
