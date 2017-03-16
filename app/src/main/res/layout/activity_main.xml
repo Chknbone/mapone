@@ -47,6 +47,39 @@
                 android:onClick="mapHybrid"/>
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnSeattle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/Seattle"
+                android:onClick="mapSeattle"/>
+
+            <Button
+                android:id="@+id/btnPanamaCity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/PanamaCity"
+                android:onClick="mapPanamaCity"/>
+
+            <Button
+                android:id="@+id/btnFiji"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/Fiji"
+                android:onClick="mapFiji"/>
+        </LinearLayout>
+
         <fragment
             xmlns:android="http://schemas.android.com/apk/res/android"
                   android:id="@+id/map"

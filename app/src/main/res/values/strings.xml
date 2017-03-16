@@ -3,9 +3,14 @@
     <!-- App name -->
     <string name="app_name">MapOne</string>
 
-    <!-- Button names -->
+    <!-- Button names for map types -->
     <string name="hybrid">Hybrid</string>
     <string name="satellite">Satellite</string>
     <string name="map">Map</string>
+
+    <!-- Button names for Cities to "Fly" too -->
+    <string name="Seattle">Seattle</string>
+    <string name="PanamaCity">Panama City</string>
+    <string name="Fiji">Fiji</string>
 
 </resources>

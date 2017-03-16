@@ -59,13 +59,60 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         mMap = map;
 
         //Creating a new LatLng. i.e. Location Map starts up at
-        LatLng fiji = new LatLng(-17.7721, 177.1925);
+        LatLng mapStart = new LatLng(38.1254, -101.1703);
 
         //Setting camera position with builder, setting target at the LatLong and setting camera
         //starting height(zoom level) as well
-        CameraPosition target = CameraPosition.builder().target(fiji).zoom(15).build();
+        CameraPosition target = CameraPosition.builder().target(mapStart).zoom(3).build();
 
         //Setting position to the target created above
         mMap.moveCamera(CameraUpdateFactory.newCameraPosition(target));
+    }
+
+    //Hooking up the Seattle Button
+    public void mapSeattle(View v) {
+        if (mapReady) {
+            //Create a new LatLng position for Seattle
+            LatLng seattle = new LatLng(47.6813, -122.4069);
+
+            //Setup the target to the new position in Seattle
+            CameraPosition target = CameraPosition.builder().target(seattle).zoom(16).tilt(20).bearing(75).build();
+
+            //Move Camera instantly to the new Seattle target
+            //mMap.moveCamera(CameraUpdateFactory.newCameraPosition(target));
+
+            //animated camera move to new location
+            mMap.animateCamera(CameraUpdateFactory.newCameraPosition(target), 7000, null);
+        }
+    }
+
+    //Hooking up the PanamaCity Button
+    public void mapPanamaCity(View v) {
+        if (mapReady) {
+            //Create a new LatLng position for Seattle
+            LatLng panamaCity = new LatLng(8.9098, -79.5250);
+
+            //Setup the target to the new position in P. City
+            CameraPosition target = CameraPosition.builder().target(panamaCity).zoom(15).tilt(30).bearing(11).build();
+
+            //animated camera move to new location
+            mMap.animateCamera(CameraUpdateFactory.newCameraPosition(target), 7000, null);
+        }
+    }
+
+    //Hooking up the Fiji Button
+    public void mapFiji(View v) {
+        if (mapReady) {
+            //Create a new LatLng position for Seattle
+            LatLng fiji = new LatLng(-17.7721, 177.1925);
+
+            //Setup the target to the new position in Seattle
+            CameraPosition target = CameraPosition.builder().target(fiji).zoom(15).tilt(25).bearing(80).build();
+
+            //animated camera move to new location
+            mMap.animateCamera(CameraUpdateFactory.newCameraPosition(target), 7000, null);
+
+
+        }
     }
 }
